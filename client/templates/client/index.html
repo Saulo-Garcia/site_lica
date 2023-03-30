@@ -1,0 +1,41 @@
+{%extends "base.html"%}
+{% load static %}
+   
+{% block 'head' %}
+        <link rel="stylesheet"  href="{% static 'css/cliente.css' %}">
+
+{% endblock %}
+
+{% block 'dashboard'%}
+ <div class='text-center'>
+      <h1>{{ title }}</h1>
+      <h2>{{ content }}</h2>
+      <h3> Esta Funcionando </h3>
+<div class= "flex flex-wrap"> # olhar pra ver se esta funcionando essa class 
+  </div>         
+    <div class="container">
+      <div class="row">
+        <div class="col-md card-dashboard">
+          <p class="text-card">Cadastrar</p>
+        
+      </div>
+      
+    </div>
+    
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md card-dashboard">
+        <p class="text-card">Atualizar</p>
+        
+      </div>
+      
+    </div>
+    
+  </div>  
+</div>
+
+
+{% endblock %}
+
+
