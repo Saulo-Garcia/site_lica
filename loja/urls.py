@@ -6,8 +6,8 @@ from .views import home_page, about_page, contact_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_page),
-    path('sobre/', about_page),
+    path('', home_page, name='home_page'),
+    path('sobre/', about_page, name='about_page'),
     path('contato/', contact_page),
     path('cliente/', include('client.urls')),
     path('produto/', include('product.urls'))
