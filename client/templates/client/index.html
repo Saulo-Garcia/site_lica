@@ -1,40 +1,58 @@
 {%extends "base.html"%}
-{% load static %}
-   
-{% block 'head' %}
-        <link rel="stylesheet"  href="{% static 'css/cliente.css' %}">
 
+{% load static %}
+
+{% block 'head' %}
+  <link rel="stylesheet"  href="{% static 'css/style.css' %}">
 {% endblock %}
 
 {% block 'dashboard'%}
- <div class='text-center'>
-      <h1>{{ title }}</h1>
-      <h2>{{ content }}</h2>
-      <h3> Esta Funcionando </h3>
-<div class= "flex flex-wrap"> # olhar pra ver se esta funcionando essa class 
-  </div>         
-    <div class="container">
-      <div class="row">
-        <div class="col-md card-dashboard">
-          <p class="text-card">Cadastrar</p>
-        
-      </div>
-      
-    </div>
-    
-    </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md card-dashboard">
-        <p class="text-card">Atualizar</p>
-        
-      </div>
-      
-    </div>
-    
-  </div>  
-</div>
 
+  <section class="content-center">
+
+    <div class="text-center">
+    <a href="https://www.hcode.com.br" target="_blank"><img src="{% static "img/rolodelinha.png" %}" alt=""></a>
+    </div>
+
+
+    <form action"" method="POST" id="form-login">
+      {% csrf_token %}
+        <div>
+        <label for="nome">Nome</label>
+        {{form.nome}}
+         <small class="text-muted">{{ field..help_text}}</small>
+        </div>
+      
+       <div class="col-md">
+          <p>Sobrenome:</p>
+         {{form.sobrenome}}
+       </div>
+      <div>
+        <br>
+        <p>E-mail:</p>
+          {{form.email}}
+        <br
+          <div>
+           <p>CPF:</p>
+           {{form.cpf}} 
+          </div>
+           <br
+          <div>
+           <p>Numero do Celular:</p>
+           {{form.nrTelCelular}} 
+          </div>
+      <div>
+      <input type="password" id="password" placeholder="Digite a senha" required>
+      </div>
+
+      <div>
+      <button id="btn-submit">Enviar</button>
+      </div>
+    </form> 
+
+  
+  </<section>
+  <script src="{% static 'js/script.js' %}"></script>
 
 {% endblock %}
 

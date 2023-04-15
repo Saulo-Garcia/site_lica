@@ -21,3 +21,4 @@ def contact_page(request):
         "content": "Bem vindo a Pagina Contato !! "
     }
     return render(request, "contact\index.html", context)
+

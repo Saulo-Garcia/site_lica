@@ -1,0 +1,60 @@
+{%extends "base.html"%}
+
+
+{% load static %}
+   
+{% block 'head' %}
+        <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+
+{% endblock %}
+
+{% block 'dashboard'%}
+   
+<body>
+  
+    <header>
+
+      <h1><a href="https://www.hcode.com.br">LICA</a></h1>
+      <nav>pesquisa</nav>
+
+    </header>
+
+    <section class="content-center">
+     <div class ="nome_lica">
+       <h1>Lica</h1> 
+     </div> 
+      <div class="text-center">
+        <a href="https://www.hcode.com.br" target="_blank"><img src="{% static 'img/rolodelinha.png' %}" alt=""></a>
+      </div>
+
+      <form action="/login" method="POST" id="form-login">
+
+       <div>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+       </div>
+
+        <div>
+          <input type="password" id="password" placeholder="Digite a senha" required>
+        </div>
+
+        <div>
+          <button id="btn-submit">Enviar</button>
+        </div>
+
+      </form>
+
+    </section>
+
+    <footer>
+      <h3>Lica Handmade</h3> 
+    </footer>
+
+    
+
+   <script src="{% static 'js/script.js' %}"></script> 
+</body>
+
+     
+
+  {% endblock %}
+

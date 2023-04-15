@@ -18,7 +18,7 @@
     
     <div class="sidebar">
         <div class="logo-details">
-            <div class="logo_name">LICA</div>
+            <div class="logo_name"><img src="{% static "img/rolodelinha.png" %}" alt=""></div>
             <i class='bx bx-menu' id="btn" ></i>
         </div>
         <ul class="nav-list">
@@ -57,8 +57,16 @@
           </a>
           <span class="tooltip">Sobre Nós</span>
         </li>
+          <li>
+          <a href="/login">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Login</span>
+          </a>
+          <span class="tooltip">login</span>
+        </li>
         </ul>
       </div>
+    
       
       <section class="home-section">
           {% block 'dashboard'%}
