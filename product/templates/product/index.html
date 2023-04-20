@@ -1,18 +1,30 @@
 {%extends "base.html"%}
 
-{% load money %}  
+{% load static %}
 
+{% load money %}  
+{% block 'head' %}
+ <link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
 
 {% block 'dashboard' %}
-       <div class="flex flex-wrap">          
-         {% for product in products %}
-              <div class="product w-1/3 p-2">
-                   <div class="p-4 bg-gray-100">
-                        <h1>{{product.title}}</h1>
-                        <p>{{product.price|currency}}</p>
-                  </div>
-              </div>
-         {% endfor %}
-       </div>
+   <div class="flex">
+    
+     {% for product in products %}
+ 
+       <div class="bloco">          
+           <div class="item">
+                <div class="price">
+                  
+                    <h1>{{product.title}}</h1>
+                    <p>{{product.price|currency}}</p>
+ 
+                </div>
+                 
+          </div>
+        </div>
 
+    {% endfor %}
+
+  </div>
 {% endblock %}
