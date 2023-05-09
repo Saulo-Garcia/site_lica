@@ -1,3 +1,11 @@
 super user
 login = admin
 passoword = @admin
+<img class="logo_image", src="{% static "img/logo.png"%}", alt="Lica">
+
+
+ <h1>
+         <a href="/">
+            <span>Lica</span>
+         </a>
+       </h1>

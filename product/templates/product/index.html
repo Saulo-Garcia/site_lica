@@ -1,4 +1,4 @@
-{%extends "base.html"%}
+{%extends "pages/base.html"%}
 
 {% load static %}
 
@@ -8,23 +8,36 @@
 {% endblock %}
 
 {% block 'dashboard' %}
-   <div class="flex">
+
+ <div class="flex">
+    <div class="container">
+      
+        {% for product in products %}
     
-     {% for product in products %}
- 
-       <div class="bloco">          
-           <div class="item">
-                <div class="price">
-                  
+            <div class="product">   
+
+                {% if product.image %}       
+                  <div class="image">
+                    <img class="product_image" src="{{ product.image.url }}" alt="foto produto {{ product.image.url }}">
+                  </div>     
+                {% endif%}
+
+                  <div class="title">
                     <h1>{{product.title}}</h1>
-                    <p>{{product.price|currency}}</p>
- 
-                </div>
-                 
-          </div>
-        </div>
+                  </div>
 
-    {% endfor %}
+                  <div class="price">
+                      <p> Preço : <span>{{product.price|currency}}</span></p>  
+                      <a href="#">Adicionar ao Carrinho</a>    
+                  </div>             
+                        
+            </div>           
+                        
+      
+            
 
+        {% endfor %}
+    </div>
+  
   </div>
 {% endblock %}

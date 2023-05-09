@@ -1,10 +1,13 @@
 :root{
-     
+
+    --color-roxo-nave: #37155d;
     --main-color: #522df3;
     --dark-color: #3a22cf;
     --light-color: #ffc27f;
     --contrast-color: #f88863;
     --differential-color: #ffe29a;
+    
+    --spacing-gutter-large: 4rem;
 
 }
 

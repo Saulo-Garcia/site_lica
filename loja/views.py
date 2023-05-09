@@ -6,7 +6,7 @@ def home_page(request):
         "title": "Pagina Principal",
         "content": "Bem Vindo" 
     }
-    return render(request, "index.html", context)
+    return render(request, "home_page\index.html", context)
 
 def about_page(request):
     context = {
